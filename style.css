@@ -1,0 +1,109 @@
+*{
+margin:0px;
+}
+#BG{
+	width:1320px;
+	height:1300px;
+	background-color:#FFE7BA;
+	border-radius:20px;
+	margin:auto;
+	}
+	#head{
+		width:1320px;
+	height:200px;
+	background-color:#FFB6C1;
+	border-radius:20px;
+	
+		}
+	#photos{
+	width:820px;
+	height:500px;
+	background-color:#A4D3EE;
+	border-radius:10px;
+	margin:10px;
+	float:left;
+		}
+	#right{
+	width:465px;
+	height:900px;
+	background-color:#CD6090;
+	border-radius:10px;
+	margin:10px;
+	margin-left:3px;
+	float:left;
+		}
+	#underphotos{
+		position:absolute;
+		top:710px;
+		width:820px;
+	height:390px;
+	background-color:#A4D4AE;
+	border-radius:10px;
+	margin:10px;	
+	}
+	#bottom{
+		width:1320px;
+	height:180px;
+	background-color:#4A4A4A;
+	border-radius:10px;
+	float:left;
+		}
+	#head h3{
+		position:absolute;
+		top: 15px;
+		left: 590px;
+		font-family:"方正静蕾简体";
+		text-align: right;
+		color:dimgrey;
+		font-size:80px;
+		white-space: nowrap;
+		cursor:default;
+			}
+#head img{
+	border-radius: 20px;
+}
+#index{
+	position: absolute;
+	top:95px;
+	left: 600px;
+	width: 165px;
+	height: 135px;
+	background-image: url(head_button.png);
+}
+#index:hover{
+	background-position: right;
+	
+}
+
+
+
+
+#index2{
+	position: absolute;
+	top:95px;
+	left: 850px;
+	width: 165px;
+	height: 135px;
+	background-image: url(head_button_suibi.png);
+}
+#index2:hover{
+	background-position: right;
+	
+}
+
+
+
+
+
+#index3{
+	position: absolute;
+	top:95px;
+	left: 1100px;
+	width: 165px;
+	height: 135px;
+	background-image: url(head_button_yutang.png);
+}
+#index3:hover{
+	background-position: right;
+	
+}

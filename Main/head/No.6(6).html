@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+<head>
+<link href="http://www.ruilee.xyz/Main/head/css/calendar.css" rel="stylesheet"  type="text/css">
+
+<script type="text/javascript">
+		function last(){
+			window.location.href="http://www.ruilee.xyz/Main/head/No.6(5).html"
+		}	
+		function next(){
+			window.location.href="http://www.ruilee.xyz/Main/head/No.6(7).html"
+		}	
+	function index(){
+			window.location.href="http://www.ruilee.xyz"
+		}	
+	function suibi(){
+			window.location.href="http://www.ruilee.xyz"
+		}	
+	function yutang(){
+			window.location.href="http://www.ruilee.xyz/fishtown.html"
+		}	
+	</script>
+<meta charset="utf-8">
+<link href="http://www.ruilee.xyz/Main/head/qsmain1style.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+body {
+	margin-left: 1000px;
+
+	margin-top: 200px;
+}
+body,td,th {
+	font-size: 16px;
+	color: #000000;
+}
+a {
+	font-size: 10px;
+}
+</style>
+<title>Page6</title>
+</head>
+<body leftmargin="100" id="body">
+<div id="BG">
+<div id="cebianlan">
+<div id="ce1" onClick="index()">
+  <p style="text-align: center; font-size: x-large;"><br>
+    <span style="font-size: 36px">首页</span></p>
+</div>
+<div id="ce2" style="font-size: 36px" onClick="suibi()"><br>
+&nbsp;&nbsp;  随笔</div>
+<div id="ce3" onClick="yutang()">
+  <p style="font-size: 36px">&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;    鱼塘</p>
+</div>
+</div>
+<div id="calendar" class="calendar"></div>
+<script src="http://www.ruilee.xyz/Main/head/js/jquery.min.js"></script>
+<script src="http://www.ruilee.xyz/Main/head/js/calendar.js"></script>
+
+<div id="head"> </div>
+<div id="contain">
+  <div id="text">
+
+    <div id="last" onClick="last()"></div>
+    <div id="next" onClick="next()">
+      <p>&nbsp;</p>
+    </div>
+    <p>import java.util.Scanner;<br>
+      public class _9 {<br>
+static Scanner in = new Scanner(System.in);<br>
+static int n, m;<br>
+static int[][] oje = new int[7][7];<br>
+static int count = 0;<br>
+static int[] dui = {0, 4, 5, 6, 1, 2, 3};<br>
+static int BigInt = 1000000007;<br>
+public static void main(String[] args) {<br>
+n = in.nextInt(); m = in.nextInt();<br>
+int a, b;<br>
+for (int i = 0; i &lt; m; i++) {<br>
+a = in.nextInt(); b = in.nextInt();<br>
+oje[a][b] =1;<br>
+oje[b][a] = 1;<br>
+}<br>
+dfs(0, -1);<br>
+int ans = 1;<br>
+for (int i = 0; i &lt; n; i++) {<br>
+ans = (ans*4)%BigInt;<br>
+}<br>
+System.out.println((count*ans)%BigInt);<br>
+}<br>
+private static void dfs(int i, int di) {<br>
+if(i==n) {<br>
+count++;<br>
+if(count&gt;BigInt) count -= BigInt;<br>
+} else {<br>
+if(di==-1) {<br>
+for (int j = 1; j &lt; 7; j++) {<br>
+dfs(i+1,dui[j]);<br>
+}<br>
+} else {<br>
+for (int j = 1; j &lt; 7; j++) {<br>
+if(oje[j][di]==0) {<br>
+dfs(i+1, dui[j]);<br>
+}<br>
+}<br>
+}<br>
+}<br>
+}<br>
+}</p>
+   
+    <p>10.</p>
+  生命之树<br>
+  在X森林里，上帝创建了生命之树。<br>
+  他给每棵树的每个节点（叶子也称为一个节点）上，都标了一个整数，代表这个点的和谐值。<br>
+  上帝要在这棵树内选出一个非空节点集S，使得对于S中的任意两个点a,b，都存在一个点列 {a, v1, v2, ..., vk, b} 使得这个点列中的每个点都是S里面的元素，且序列中相邻两个点间有一条边相连。<br>
+  在这个前提下，上帝要使得S中的点所对应的整数的和尽量大。<br>
+  这个最大的和就是上帝给生命之树的评分。<br>
+  经过atm的努力，他已经知道了上帝给每棵树上每个节点上的整数。但是由于 atm 不擅长计算，他不知道怎样有效的求评分。他需要你为他写一个程序来计算一棵树的分数。<br>
+  「输入格式」<br>
+  第一行一个整数 n 表示这棵树有 n 个节点。<br>
+  第二行 n 个整数，依次表示每个节点的评分。<br>
+  接下来 n-1 行，每行 2 个整数 u, v，表示存在一条 u 到 v 的边。由于这是一棵树，所以是不存在环的。<br>
+  「输出格式」<br>
+  输出一行一个数，表示上帝给这棵树的分数。<br>
+  「样例输入」<br>
+  5<br>
+  1 -2 -3 4 5<br>
+  4 2<br>
+  3 1<br>
+  1 2<br>
+  2 5<br>
+  「样例输出」<br>
+  8</div>
+</div>
+</div>
+</body>
+</html>

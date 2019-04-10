@@ -1,0 +1,141 @@
+@charset "utf-8";
+/* CSS Document */
+
+#body{
+	margin: 0;
+	padding: 0;
+}
+#BG{
+	margin: 0;
+	padding: 0;
+	width: 1400px;
+	height: 1320px;;
+	background-color:#28557e;
+	border-radius: 10px;
+}
+#head{
+	margin: 0px;
+	width: 960px;
+	height: 100px;
+	background-image:url(http://www.ruilee.xyz/lib/photos/book2.jpg);
+
+}
+#contain{
+	width: 960px;
+	height: 1220px;
+	background-image: url(http://www.ruilee.xyz/lib/photos/book.jpg);
+	margin-bottom: 0px;
+	text-align: left;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: normal;
+
+}
+#text{
+	position: absolute;
+	top: 100px;
+	margin-left: 100px;
+	width: 800px;
+	height: 1220px;
+	text-align: left;
+	font-size: 15px;
+	font-family: "仿宋";
+	left: 3px;
+
+}
+#last{
+	position: absolute;
+	top: 1150px;
+	left: 100px;
+    width: 98px;
+	height: 32px;
+	background-image: url(../../lib/photos/last.png);
+}
+#last:hover{
+	background-position: right;
+}
+#next{
+	position: absolute;
+	top: 1150px;
+	left: 400px;
+    width: 98px;
+	height: 32px;
+	background-image: url(../../lib/photos/next.png);
+}
+#next:hover{
+	background-position: right;
+}
+#sixq1{
+	position: absolute;
+	top: 180px;
+	left: 500px;
+}
+#sixq2{
+	position: absolute;
+	top: 380px;
+	left: 630px;
+}
+#sixq3{
+	position: absolute;
+	top: 90px;
+	left: 600px;
+}
+.calender{
+	position: absolute;
+	top: 150px;
+}
+#cebianlan{
+	width: 150px;
+	height: 385px;
+	border-radius: 10px;
+	background-color:darkcyan;
+	position:fixed;
+	bottom: 2px;
+z-index: 1;
+	right: 25px;
+}
+#ce1{
+	margin: 10px;
+	background-color: antiquewhite;
+	width: 130px;
+	height: 115px;
+	border-radius: 6px;
+}
+#ce1:hover{
+	cursor:default;
+	margin: 0;
+	width: 150px;
+	height: 120px;
+}
+#ce2{
+		margin: 10px;
+
+	background-color: antiquewhite;
+	width: 130px;
+	height: 115px;
+		border-radius: 6px;
+
+}
+#ce2:hover{
+	cursor:default;
+	margin: 0;
+	width: 150px;
+	height: 120px;
+	font-size: 18px;
+}
+#ce3{
+		margin: 10px;
+
+	background-color: antiquewhite;
+	width: 130px;
+	height: 115px;
+		border-radius: 6px;
+
+}
+#ce3:hover{
+	cursor:default;
+	margin: 0;
+	width: 150px;
+	height: 120px;
+	font-size: 18px;
+}

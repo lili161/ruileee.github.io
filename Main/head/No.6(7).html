@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+<head>
+<link href="http://www.ruilee.xyz/Main/head/css/calendar.css" rel="stylesheet"  type="text/css">
+
+<script type="text/javascript">
+		function last(){
+			window.location.href="http://www.ruilee.xyz/Main/head/No.6(6).html"
+		}	
+		function next(){
+			window.location.href="http://www.ruilee.xyz"
+		}	
+	function index(){
+			window.location.href="http://www.ruilee.xyz"
+		}	
+	function suibi(){
+			window.location.href="http://www.ruilee.xy"
+		}	
+	function yutang(){
+			window.location.href="http://www.ruilee.xyz/fishtown.html"
+		}	
+	</script>
+<meta charset="utf-8">
+<link href="http://www.ruilee.xyz/Main/head/qsmain1style.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+body {
+	margin-left: 1000px;
+
+	margin-top: 200px;
+}
+body,td,th {
+	font-size: 16px;
+	color: #000000;
+}
+a {
+	font-size: 10px;
+}
+</style>
+<title>Page7</title>
+</head>
+<body leftmargin="100" id="body">
+<div id="BG">
+<div id="cebianlan">
+<div id="ce1" onClick="index()">
+  <p style="text-align: center; font-size: x-large;"><br>
+    <span style="font-size: 36px">首页</span></p>
+</div>
+<div id="ce2" style="font-size: 36px" onClick="suibi()"><br>
+&nbsp;&nbsp;  随笔</div>
+<div id="ce3" onClick="yutang()">
+  <p style="font-size: 36px">&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;    鱼塘</p>
+</div>
+</div>
+<div id="calendar" class="calendar"></div>
+<script src="http://www.ruilee.xyz/Main/head/js/jquery.min.js"></script>
+<script src="http://www.ruilee.xyz/Main/head/js/calendar.js"></script>
+
+<div id="head"> </div>
+<div id="contain">
+  <div id="text">
+
+    <div id="last" onClick="last()"></div>
+    <div id="next" onClick="next()"></div>
+    <p>「数据范围」<br>
+      对于 30% 的数据，n &lt;= 10<br>
+      对于 100% 的数据，0 &lt; n &lt;= 10^5, 每个节点的评分的绝对值不超过 10^6 。<br>
+      资源约定：<br>
+      峰值内存消耗（含虚拟机） &lt; 256M<br>
+      CPU消耗  &lt; 3000ms<br>
+      请严格按要求输出，不要画蛇添足地打印类似：“请您输入...” 的多余内容。<br>
+      所有代码放在同一个源文件中，调试通过后，拷贝提交该源码。<br>
+      注意：不要使用package语句。不要使用jdk1.7及以上版本的特性。<br>
+      注意：主类的名字必须是：Main，否则按无效代码处理。<br>
+      解析：我们简要分析之后可以发现这是一棵无向赋权图，要求是寻找一棵最大的生成树。这里采用dfs()+松弛进行求解。 <br>
+      v数组代表每个节点的评分，如果从 i 节点与 j 节点的权值和大于 i 结点本身的权值，那么更新i结点的权值，直达找出一条能够连接权值最大的路径。<br>
+      public class Main {<br>
+static int n;<br>
+static int[] v;<br>
+static int[][] arr;<br>
+static boolean[] vis;<br>
+static int max = 0;<br>
+public static void main(String[] args) {<br>
+Scanner in = new Scanner(System.in);<br>
+n = in.nextInt();<br>
+v = new int[n+1];<br>
+arr = new int[n+1][n+1];<br>
+vis = new boolean[n+1];<br>
+for (int i = 1; i &lt;= n; i++) {<br>
+v[i] = in.nextInt();<br>
+}<br>
+for (int i = 1; i &lt; n; i++) {<br>
+int a = in.nextInt();<br>
+int b = in.nextInt();<br>
+arr[a][b] = 1;<br>
+arr[b][a] = 1;<br>
+}<br>
+dfs(1);</p>
+    <p> System.out.println(max);<br>
+      }<br>
+      private static void dfs(int m) {<br>
+      vis[m] = true;<br>
+      for (int i = 1; i &lt;= n; i++) {<br>
+      if (vis[i] == false &amp;&amp; arr[m][i] != 0) {<br>
+      dfs(i);<br>
+      if (v[m] &lt; (v[m] + v[i])) {<br>
+      v[m] = v[m] +v[i];<br>
+      }<br>
+      max = Math.max(max, v[m]);<br>
+      }<br>
+      }<br>
+      }<br>
+      }</p>
+  </div>
+</div>
+</div>
+</body>
+</html>

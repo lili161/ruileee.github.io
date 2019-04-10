@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+<head>
+<link href="http://www.ruilee.xyz/Main/head/css/calendar.css" rel="stylesheet"  type="text/css">
+
+<script type="text/javascript">
+		function last(){
+			window.location.href="http://www.ruilee.xyz/Main/head/No.6(1).html"
+		}	
+		function next(){
+			window.location.href="http://www.ruilee.xyz/Main/head/No.6(3).html"
+		}	
+	function index(){
+			window.location.href="http://www.ruilee.xyz"
+		}	
+	function suibi(){
+			window.location.href="http://www.ruilee.xyz"
+		}	
+	function yutang(){
+			window.location.href="http://www.ruilee.xyz/fishtown.html"
+		}	
+	</script>
+<meta charset="utf-8">
+<link href="http://www.ruilee.xyz/Main/head/qsmain1style.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+body {
+	margin-left: 1000px;
+
+	margin-top: 200px;
+}
+body,td,th {
+	font-size: 16px;
+	color: #000000;
+}
+a {
+	font-size: 10px;
+}
+</style>
+<title>Page2</title>
+</head>
+<body leftmargin="100" id="body">
+<div id="BG">
+<div id="cebianlan">
+<div id="ce1" onClick="index()">
+  <p style="text-align: center; font-size: x-large;"><br>
+    <span style="font-size: 36px">首页</span></p>
+</div>
+<div id="ce2" style="font-size: 36px" onClick="suibi()"><br>
+&nbsp;&nbsp;  随笔</div>
+<div id="ce3" onClick="yutang()">
+  <p style="font-size: 36px">&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;    鱼塘</p>
+</div>
+</div>
+<div id="calendar" class="calendar"></div>
+<script src="http://www.ruilee.xyz/Main/head/js/jquery.min.js"></script>
+<script src="http://www.ruilee.xyz/Main/head/js/calendar.js"></script>
+
+<div id="head"> </div>
+<div id="contain">
+  <div id="text">
+
+    <div id="last" onClick="last()"></div>
+    <div id="next" onClick="next()"></div>
+    <p>3.</p>
+    <p><br>
+      三羊献瑞</p>
+    <p>观察下面的加法算式：</p>
+    <p> 祥 瑞 生 辉<br>
+      +   三 羊 献 瑞<br>
+      -------------------<br>
+      三 羊 生 瑞 气</p>
+    <img src="http://www.ruilee.xyz/Main/head/qsphotos/6q3.png" alt="" width="148" height="129" id="sixq3"/>
+    <p>(如果有对齐问题，可以参看【图1.jpg】)</p>
+    <p>其中，相同的汉字代表相同的数字，不同的汉字代表不同的数字。</p>
+    <p>请你填写“三羊献瑞”所代表的4位数字（答案唯一），不要填写任何多余内容。<br>
+    </p>
+    <p>&nbsp;</p>
+    <p>public class Three {<br>
+      public static void main(String[] args) {<br>
+      //两个4位数且各位不相同则为 1023~9876<br>
+      for(int i = 1023; i &lt;= 9876; i++){<br>
+      for(int j = 1023; j &lt;= 9876; j++) {<br>
+      int sum = i+j;<br>
+      //和为5位数，且各位都不相同10234~97654<br>
+      if(sum &gt; 10234 &amp;&amp; sum &lt;= 97654) {<br>
+      char[] a1 = String.valueOf(i).toCharArray();<br>
+      char[] a2 = String.valueOf(j).toCharArray();<br>
+      char[] a3 = String.valueOf(sum).toCharArray();<br>
+      //三个数相同的数字位<br>
+      if(a1[1] == a2[3] &amp;&amp; a1[1]==a3[3] &amp;&amp; a2[3] == a3[3] &amp;&amp;a1[2]==a3[2] &amp;&amp;a2[0]==a3[0]&amp;&amp;a2[1]==a3[1]){<br>
+      //第一个数各自的每一位都不相同<br>
+      if(a1[0]!=a1[1]&amp;&amp; a1[0]!=a1[2]&amp;&amp; a1[0]!=a1[3]&amp;&amp; a1[1]!=a1[2]&amp;&amp; a1[1]!=a1[3]&amp;&amp; a1[2]!=a1[3]){<br>
+      //第二个数各自的每一位都不相同<br>
+      if(a2[0]!=a2[1]&amp;&amp; a2[0]!=a2[2]&amp;&amp; a2[0]!=a2[3]&amp;&amp; a2[1]!=a2[2]&amp;&amp; a2[1]!=a2[3]&amp;&amp; a2[2]!=a2[3]){<br>
+      //第三个数各自的每一位都不相同<br>
+      if(a3[0]!=a3[1]&amp;&amp;a3[0]!=a3[2]&amp;&amp;a3[0]!=a3[3]&amp;&amp;a3[0]!=a3[4]&amp;&amp;a3[1]!=a3[2]&amp;&amp;a3[1]!=a3[3]&amp;&amp;a3[1]!</p>
+    <p>=a3[4]&amp;&amp;a3[2]!=a3[3]&amp;&amp;a3[2]!=a3[4]&amp;&amp;a3[3]!=a3[4]){<br>
+      //第一个数的第0位和第3位其他两个数都不包含<br>
+      if(!String.valueOf(j).contains(String.valueOf(i).substring(0,1)) &amp;&amp; !String.valueOf(j).contains(String.valueOf(i).substring(3,4))){<br>
+      //第二个数的第2位与第三个数的第二位不相同<br>
+      if(a2[2] != a3[2]){<br>
+      System.out.println(&quot; &quot; + i);<br>
+      System.out.println(&quot; &quot; + j);<br>
+      System.out.println(sum);<br>
+      } <br>
+      } <br>
+      }<br>
+      }<br>
+      }<br>
+      }<br>
+      }<br>
+      }<br>
+      }<br>
+      }<br>
+      }</p>
+    <p>打印结果</p>
+    <p>9567 <br>
+      1085 <br>
+      10652</p>
+    <p>答案：1085<br>
+    </p>
+  </div>
+</div>
+</div>
+</body>
+</html>

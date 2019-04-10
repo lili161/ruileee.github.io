@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+<head>
+<link href="http://www.ruilee.xyz/Main/head/css/calendar.css" rel="stylesheet"  type="text/css">
+
+<script type="text/javascript">
+		function last(){
+			window.location.href="http://www.ruilee.xyz/Main/head/No.6(2).html"
+		}	
+		function next(){
+			window.location.href="http://www.ruilee.xyz/Main/head/No.6(4).html"
+		}	
+	function index(){
+			window.location.href="http://www.ruilee.xyz"
+		}	
+	function suibi(){
+			window.location.href="http://www.ruilee.xyz"
+		}	
+	function yutang(){
+			window.location.href="http://www.ruilee.xyz/fishtown.html"
+		}	
+	</script>
+<meta charset="utf-8">
+<link href="http://www.ruilee.xyz/Main/head/qsmain1style.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+body {
+	margin-left: 1000px;
+
+	margin-top: 200px;
+}
+body,td,th {
+	font-size: 16px;
+	color: #000000;
+}
+a {
+	font-size: 10px;
+}
+</style>
+<title>Page3</title>
+</head>
+<body leftmargin="100" id="body">
+<div id="BG">
+<div id="cebianlan">
+<div id="ce1" onClick="index()">
+  <p style="text-align: center; font-size: x-large;"><br>
+    <span style="font-size: 36px">首页</span></p>
+</div>
+<div id="ce2" style="font-size: 36px" onClick="suibi()"><br>
+&nbsp;&nbsp;  随笔</div>
+<div id="ce3" onClick="yutang()">
+  <p style="font-size: 36px">&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;    鱼塘</p>
+</div>
+</div>
+<div id="calendar" class="calendar"></div>
+<script src="http://www.ruilee.xyz/Main/head/js/jquery.min.js"></script>
+<script src="http://www.ruilee.xyz/Main/head/js/calendar.js"></script>
+
+<div id="head"> </div>
+<div id="contain">
+  <div id="text">
+
+    <div id="last" onClick="last()"></div>
+    <div id="next" onClick="next()"></div>
+    <p>4.循环节长度<br>
+      两个整数做除法，有时会产生循环小数，其循环部分称为：循环节。<br>
+      比如，11/13=6=&gt;0.846153846153.....  其循环节为[846153] 共有6位。<br>
+      下面的方法，可以求出循环节的长度。<br>
+      请仔细阅读代码，并填写划线部分缺少的代码。<br>
+      public static int f(int n, int m)<br>
+      {<br>
+      n = n % m; <br>
+      Vector v = new Vector();<br>
+  <br>
+      for(;;)<br>
+      {<br>
+      v.add(n);<br>
+      n *= 10;<br>
+      n = n % m;<br>
+      if(n==0) return 0;<br>
+      if(v.indexOf(n)&gt;=0)  _________________________________ ;  //填空<br>
+      }<br>
+      }<br>
+      注意，只能填写缺少的部分，不要重复抄写已有代码。不要填写任何多余的文字。<br>
+      解题思路：将每次求余的到余数存在Vector中，如果有发现有重复并且不是第0位（第0位有是整数位），这个题目比较简单。<br>
+      答案：<br>
+      v.size()-v.indexOf(n);</p>
+    <p>5.九数组分数<br>
+      1,2,3...9 这九个数字组成一个分数，其值恰好为1/3，如何组法？<br>
+      下面的程序实现了该功能，请填写划线部分缺失的代码。<br>
+      public class A<br>
+      {<br>
+public static void test(int[] x)<br>
+{<br>
+int a = x[0]*1000 + x[1]*100 + x[2]*10 + x[3];<br>
+int b = x[4]*10000 + x[5]*1000 + x[6]*100 + x[7]*10 + x[8]; <br>
+if(a*3==b) System.out.println(a + &quot; &quot; + b);<br>
+}<br>
+<br>
+public static void f(int[] x, int k)<br>
+{<br>
+if(k&gt;=x.length){<br>
+test(x);<br>
+return;<br>
+}<br>
+<br>
+for(int i=k; i&lt;x.length; i++){<br>
+{int t=x[k]; x[k]=x[i]; x[i]=t;}<br>
+f(x,k+1);<br>
+_______________________________________       // 填空<br>
+}<br>
+}<br>
+public static void main(String[] args)<br>
+{<br>
+int[] x = {1,2,3,4,5,6,7,8,9}; <br>
+f(x,0);<br>
+}<br>
+}<br>
+注意，只能填写缺少的部分，不要重复抄写已有代码。不要填写任何多余的文字。<br>
+解题思路：这题是排列组合问题，代码中就是对9个数字进行全排列。 <br>
+答案：<br>
+{int t=x[k]; x[k]=x[i]; x[i]=t;}<br>
+    </p>
+  
+ 
+  </div>
+</div>
+</div>
+</body>
+</html>

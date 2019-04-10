@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+<head>
+<link href="http://www.ruilee.xyz/Main/head/css/calendar.css" rel="stylesheet"  type="text/css">
+
+<script type="text/javascript">
+		function last(){
+			window.location.href="http://www.ruilee.xyz/Main/head/No.6(3).html"
+		}	
+		function next(){
+			window.location.href="http://www.ruilee.xyz/Main/head/No.6(5).html"
+		}	
+	function index(){
+			window.location.href="http://www.ruilee.xyz"
+		}	
+	function suibi(){
+			window.location.href="http://www.ruilee.xyz"
+		}	
+	function yutang(){
+			window.location.href="http://www.ruilee.xyz/fishtown.html"
+		}	
+	</script>
+<meta charset="utf-8">
+<link href="http://www.ruilee.xyz/Main/head/qsmain1style.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+body {
+	margin-left: 1000px;
+
+	margin-top: 200px;
+}
+body,td,th {
+	font-size: 16px;
+	color: #000000;
+}
+a {
+	font-size: 10px;
+}
+</style>
+<title>Page4</title>
+</head>
+<body leftmargin="100" id="body">
+<div id="BG">
+<div id="cebianlan">
+<div id="ce1" onClick="index()">
+  <p style="text-align: center; font-size: x-large;"><br>
+    <span style="font-size: 36px">首页</span></p>
+</div>
+<div id="ce2" style="font-size: 36px" onClick="suibi()"><br>
+&nbsp;&nbsp;  随笔</div>
+<div id="ce3" onClick="yutang()">
+  <p style="font-size: 36px">&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;    鱼塘</p>
+</div>
+</div>
+<div id="calendar" class="calendar"></div>
+<script src="http://www.ruilee.xyz/Main/head/js/jquery.min.js"></script>
+<script src="http://www.ruilee.xyz/Main/head/js/calendar.js"></script>
+
+<div id="head"> </div>
+<div id="contain">
+  <div id="text">
+
+    <div id="last" onClick="last()"></div>
+    <div id="next" onClick="next()">
+      <p>&nbsp;</p>
+    </div>
+    <p>6.加法变乘法<br>
+      我们都知道：1+2+3+ ... + 49 = 1225<br>
+      现在要求你把其中两个不相邻的加号变成乘号，使得结果为2015<br>
+      比如：<br>
+      1+2+3+...+10*11+12+...+27*28+29+...+49 = 2015<br>
+      就是符合要求的答案。<br>
+      请你寻找另外一个可能的答案，并把位置靠前的那个乘号左边的数字提交（对于示例，就是提交10）<br>
+      注意：需要你提交的是一个整数，不要填写任何多余的内容。<br>
+      这种题目意思很明确，可以借助计算机的强大计算能力进行遍历,需要注意题目中的不相邻的加号。 <br>
+      方法一(逆向)：<br>
+      public class Six {<br>
+      public static void main(String[] args) {<br>
+      int sum;<br>
+      for (int i = 1; i &lt; 49; i++){<br>
+      for (int j = i+2; j &lt; 49; j++) {<br>
+      sum = 1225;<br>
+      sum -= i+i+1+j+j+1;//减去四个相乘的数<br>
+      sum += i*(i+1)+j*(j+1);<br>
+      if(sum == 2015) {<br>
+      System.out.println(&quot;i=&quot; + i + &quot;,j=&quot; + j);<br>
+      }<br>
+      }<br>
+      }<br>
+      }<br>
+      }<br>
+      答案：<br>
+      16<br>
+    </p>
+    <p>7. 牌型种数<br>
+      小明被劫持到X赌城，被迫与其他3人玩牌。<br>
+      一副扑克牌（去掉大小王牌，共52张），均匀发给4个人，每个人13张。<br>
+      这时，小明脑子里突然冒出一个问题：<br>
+      如果不考虑花色，只考虑点数，也不考虑自己得到的牌的先后顺序，自己手里能拿到的初始牌型组合一共有多少种呢？<br>
+      请填写该整数，不要填写任何多余的内容或说明文字。<br>
+      解题思路：动态规划<br>
+      public class Seven {<br>
+public static void main(String[] args) {<br>
+int[][] dp = new int[14][14];<br>
+dp[0][0] = 1;<br>
+for (int i = 1; i &lt; 14; i++)<br>
+for (int j = 0; j &lt; 14; j++)<br>
+for (int k = 0; k &lt; 5; k++)<br>
+if (j + k &lt;= 13)<br>
+dp[i][j + k] += dp[i - 1][j];<br>
+System.out.println(dp[13][13]);<br>
+}<br>
+}<br>
+答案：<br>
+3598180<br>
+    </p>
+    <p>8.饮料换购<br>
+      乐羊羊饮料厂正在举办一次促销优惠活动。乐羊羊C型饮料，凭3个瓶盖可以再换一瓶C型饮料，并且可以一直循环下去，但不允许赊账。<br>
+      请你计算一下，如果小明不浪费瓶盖，尽量地参加活动，那么，对于他初始买入的n瓶饮料，最后他一共能得到多少瓶饮料。<br>
+      输入：一个整数n，表示开始购买的饮料数量（0&lt;n&lt;10000）<br>
+      输出：一个整数，表示实际得到的饮料数<br>
+      例如：</p>
+    <p>用户输入：<br>
+      100<br>
+      程序应该输出：<br>
+      149<br>
+      用户输入：<br>
+      101<br>
+      程序应该输出：<br>
+      151 </p>
+    
+ 
+  </div>
+</div>
+</div>
+</body>
+</html>
